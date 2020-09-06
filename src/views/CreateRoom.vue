@@ -118,10 +118,10 @@ export default {
 
       this.setCurrentUser(userName)
 
-      setDataToFirebase(`${roomId}/users`, [{ name: userName, vote: '' }])
-      setDataToFirebase(`${roomId}/stories`, stories)
-      setDataToFirebase(`${roomId}/sessionName`, this.form.sessionName)
-      setDataToFirebase(`${roomId}/maxUserCount`, this.form.numberOfVoters)
+      setDataToFirebase('users', [{ name: userName, vote: '' }], roomId)
+      setDataToFirebase('stories', stories, roomId)
+      setDataToFirebase('sessionName', this.form.sessionName, roomId)
+      setDataToFirebase('maxUserCount', this.form.numberOfVoters, roomId)
 
       this.$router.push(`/room/${roomId}`)
     },
