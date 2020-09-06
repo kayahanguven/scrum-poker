@@ -2,7 +2,7 @@ import fire from '../firebase'
 import router from '@/router'
 
 export function setDataToFirebase (reference, data) {
-  fire.database().ref(reference).set(data)
+  fire.database().ref(`${router.currentRoute.params.id}/${reference}`).set(data)
 }
 
 export async function checkRoomAvailability (users) {
