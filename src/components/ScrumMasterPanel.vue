@@ -1,5 +1,6 @@
 <template>
     <b-card title="Scrum Master Panel" :sub-title="`${activeStory.name} is active`" class="mt-5 scrum-master-panel">
+        <div class="room-url">You can invite your friends with this link: {{ getUrl }}</div>
         <div
             v-for="user in users"
             :key="user.name">
@@ -67,6 +68,9 @@ export default {
       }
 
       return 0
+    },
+    getUrl () {
+      return window.location.href
     }
   },
 
@@ -84,10 +88,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#story-point-input {
-    width: 100px;
-}
 .scrum-master-panel {
     min-height: 550px;
+
+    .room-url {
+      font-size: 12px;
+      position: absolute;
+      bottom: 7px;
+    }
+
+    #story-point-input {
+      width: 100px;
+    }
 }
 </style>
