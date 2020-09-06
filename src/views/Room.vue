@@ -46,7 +46,7 @@ export default {
       const users = await (await usersRef.once('value')).val()
 
       if (!await checkRoomAvailability(users)) {
-        that.$router.push('/create-room')
+        that.$router.push('/room/create')
 
         return
       }

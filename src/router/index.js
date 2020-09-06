@@ -8,10 +8,10 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/create-room'
+    redirect: '/room/create'
   },
   {
-    path: '/create-room',
+    path: '/room/create',
     name: 'CreateRoom',
     component: CreateRoom
   },
