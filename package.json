@@ -7,15 +7,18 @@
     "build": "vue-cli-service build",
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
+    "start": "node server.js",
     "sass": "node-sass --include-path scss src/assets/style.scss   public/css/style.css"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "firebase": "^7.19.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+    "serve-static": "^1.14.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuelidate": "^0.7.5",
