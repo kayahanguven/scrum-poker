@@ -1,0 +1,12 @@
+name: "Unit Tes"
+on:
+  push:
+
+jobs:
+  UnitTestAndCoveralls:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - run: npm install
+    - run: npm run test;
