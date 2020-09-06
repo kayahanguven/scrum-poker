@@ -1,17 +1,24 @@
 {
-  "name": "planning-poker",
+  "name": "scrum-poker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "sass": "node-sass --include-path scss src/assets/style.scss   public/css/style.css"
   },
   "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
+    "firebase": "^7.19.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vuelidate": "^0.7.5",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
